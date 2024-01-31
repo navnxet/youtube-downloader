@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+    cursor: none;
+}
+*::selection{
+    color: #141414;
+    background-color: rgba(255, 255, 255);
+}
+:root{
+    --main-color: linear-gradient(59.62deg,#4c36b1,#a678f4 102%);
+    --box-color: #fff;
+    --box-textColor: #000;
+    --cursor: #fff;
+    --font-family: 'Poppins', sans-serif;
+    --shadow: ;
+    --preview-border: .15vw dashed #4c36b1;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    font-family: var(--font-family);
+    background: var(--main-color);
+    scroll-behavior: smooth;
+}
+.main{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    position: relative;
+    align-items: center; 
+    justify-content: space-between;
+}
+.cursor{
+    z-index: 1;
+    width: .95vw;
+    height: .95vw;
+    position: absolute;
+    border-radius: 5vw;
+    background: var(--cursor);
+}
+.left{
+    position: relative;
+    margin: 0 0 0 15vw;
+}
+.left .title h1{
+    opacity: .9;
+    font-size: 4vw;
+    font-weight: 600;
+    color: #ececeb;
+    line-height: 4.29vw;
+    margin: 1vw 0 2vw 0;
+}
+.left .title p{
+    font-size: 1vw;
+    font-weight: 400;
+    line-height: 1.8vw;
+    color: #ececeb;
+    opacity: .9;
+}
+.socials{
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+    margin: 2vw 0 0 0;
+}
+.socials a{
+    color: #fff;
+    font-size: 1.7vw;
+    text-decoration: none;
+    opacity: .8;
+    transition: all .35s ease-in-out;
+}
+.socials a:hover{
+    opacity: 1;
+    transform: translateY(-.4vw);
+}
+.right{
+    position: relative;
+    margin: 0 15vw 0 0;
+}
+.right form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #141414;
+    background-color: var(--box-color);
+    border-radius: 1.2vw;
+    padding: 2.8vw 2.3vw;
+}
+.right form h4{
+    font-size: 1.1vw;
+    font-weight: 400;
+    margin-left: .4vw;
+}
+.right form .input-field{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 22vw;
+    border-radius: 1.5vw;
+}
+.right form input{
+    font-family: var(--font-family);
+    width: inherit;
+    font-size: 1vw;
+    font-weight: 400;
+    border-radius: 10vw;
+    padding: .7vw 1.2vw;
+    margin: .5vw 0 0 0;
+    color: rgba(0, 0, 0, 0.7);
+    border: .1vw solid #929292;
+    overflow: hidden;
+}
+.right form input:focus{
+    outline: none;
+}
+.right form input::selection{
+    color: #fff;
+    background-color: rgb(0, 0, 0, 0.78);
+}
+.right form .input-field .line{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width:22vw;
+    height: .15vw;
+    transform: scale(0);
+    transition: transform 0.5s ease;
+}
+.right form input:focus ~ .line{
+    background: var(--main-color);
+    transform: scale(1);
+}
+.right form .upper{
+    display: flex;
+    flex-direction: column;
+}
+.right form .preview{
+    width: 22vw;
+    height: 12.6vw;
+    border-radius: 1.1vw;
+    position: relative;
+    border: var(--preview-border);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1.8vw 0 1.8vw 0;
+}
+.right form .preview img{
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    object-fit: cover;
+    border-radius: inherit;
+}
+.right form .preview img[src=""] {
+    display: none;
+  }
+.right form .preview .cloud{
+    font-size: 3vw;
+    background: var(--main-color);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color:transparent;
+}
+.right form .preview p{
+    font-size: 1.2vw;
+    font-weight: 400;
+}
+.right form .preview p::selection{
+    color: #fff;
+    background-color: rgb(0, 0, 0, 0.78);
+}
+.right form .buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 22vw;
+}
+.right form .btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1vw;
+    font-weight: 400;
+    width: inherit;
+    border-radius: .48vw;
+    padding: .7vw 1.2vw;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    background: var(--main-color);
+    font-family: var(--font-family);
+}
+.right form a{
+    width: inherit;
+    cursor: pointer;
+    text-decoration: none;
+}
+.right form .btn1{
+    margin-bottom: 1vw;
+}
